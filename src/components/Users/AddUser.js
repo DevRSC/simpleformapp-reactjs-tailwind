@@ -51,48 +51,50 @@ const AddUser = (props) => {
 
   return (
     <>
-      {!toggle ? (
-        <ErrorAlertModal
-          title={error.title}
-          message={error.message}
-          showModal={toggleHandler}
-        />
-      ) : null}
-      <Card>
-        <form className='space-y-2' onSubmit={submitHandler}>
-          <h1 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
-            User Form
-          </h1>
-          <div>
-            <label className='block text-gray-700 dark:text-white'>
-              Full Name
-            </label>
-            <input
-              type='text'
-              onChange={nameEventHandler}
-              value={name}
-              placeholder='John Doe'
-              className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400'
-            />
-          </div>
-          <div>
-            <label className='block text-gray-700 dark:text-white'>Age</label>
-            <input
-              type='number'
-              onChange={ageEventHandler}
-              value={age}
-              placeholder='Age'
-              className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400'
-            />
-          </div>
-          <button
-            type='submit'
-            className='mt-3 w-full border-spacing-2 rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
-          >
-            Add User
-          </button>
-        </form>
-      </Card>
+      <div>
+        {!toggle ? (
+          <ErrorAlertModal
+            title={error.title}
+            message={error.message}
+            showModal={toggleHandler}
+          />
+        ) : null}
+        <Card>
+          <form className='space-y-2' onSubmit={submitHandler}>
+            <h1 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+              User Form
+            </h1>
+            <div>
+              <label className='block text-gray-700 dark:text-white'>
+                Full Name
+              </label>
+              <input
+                type='text'
+                onChange={nameEventHandler}
+                value={name}
+                placeholder='John Doe'
+                className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400'
+              />
+            </div>
+            <div>
+              <label className='block text-gray-700 dark:text-white'>Age</label>
+              <input
+                type='number'
+                onChange={ageEventHandler}
+                value={age}
+                placeholder='Age'
+                className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400'
+              />
+            </div>
+            <button
+              type='submit'
+              className='mt-3 w-full border-spacing-2 rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+            >
+              Add User
+            </button>
+          </form>
+        </Card>
+      </div>
     </>
   );
 };
