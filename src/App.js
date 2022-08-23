@@ -19,12 +19,14 @@ const App = () => {
   };
 
   return (
-    <div className='flex h-screen w-screen flex-col bg-slate-600'>
-      <div className='m-9'>
-        <AddUser onAddUser={addUserHandler} />
-        <UserList UserData={users} />
+    <>
+      <div className='flex h-screen w-screen flex-col justify-center  bg-slate-600'>
+        <div className='m-9'>
+          <AddUser onAddUser={addUserHandler} />
+          <UserList UserData={users} />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
